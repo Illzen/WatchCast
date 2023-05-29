@@ -1,5 +1,15 @@
 <div class="container">
     <text class="title">
         {{ $t('strings.hello') }} {{ title }}
+        {{ $t('strings.fuck') }}
     </text>
+    <text class="swipeText" else>
+        Swipe down
+    </text>
+    <div class="container" onswipe="toWeatherPage">
+<!--        <image class="img" src='/image/mark_arrow_down.png' style="animation-duration:{{duration}};-->
+<!--                animation-iteration-count:{{count}};" />        -->
+        <image class="img" src='/image/mark_arrow_down.png' style="animation-duration:{{duration}};
+                animation-iteration-count:{{count}};" />
+    </div>
 </div>
