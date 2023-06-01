@@ -29,9 +29,16 @@
       {
         "pages": [
           "pages/index/index",
-          "pages/weather/weather"
+          "pages/launcher/launcher",
+          "pages/test/test"
         ],
         "name": "default"
+      }
+    ],
+    "reqPermissions": [
+      {
+        "reason": "",
+        "name": "ohos.permission.INTERNET"
       }
     ]
   }

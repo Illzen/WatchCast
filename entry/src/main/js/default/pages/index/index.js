@@ -1,40 +1,31 @@
 import router from '@system.router';
-import fetch from 'node-fetch';
 
 export default {
+    data: {
+        title: ""
+    },
     onInit() {
-
-        let KEY = "8289fc0cb3cc706f3078a8c86bea911f";
-        let ID = "1810821";
-        const UNIT = 'metric';
-
-        fetch(`http://api.openweathermap.org/data/2.5/weather?APPID=${KEY}&id=${
-        ID}&units=${UNIT}`)
-            .then(response => response.json())
-            .then(data => {
-                // Do something with the data
-                console.log(data);
-            })
-            .catch(error => {
-                // Handle any errors
-                console.error(error);
+        console.log("index.js/onInit() is evoked");
+        router.replace({
+            // uri: "pages/report2/report2",
+//            uri: "pages/report3/report3",
+        });
+    },
+    onReady() {
+        console.log("index.js/onReady() is evoked");
+    },
+    onShow() {
+        console.log("index.js/onShow() is evoked");
+    },
+    onDestroy() {
+        console.log("index.js/onDestroy() is evoked");
+    },
+    //        JSON.parse(https://api.openweathermap.org/data/2.5/forecast?id=1810821&appid=8289fc0cb3cc706f3078a8c86bea911f);
+    toWeatherPage(e) {
+        if (e.direction == 'up') {
+            router.replace({
+                uri: 'pages/launcher/launcher'
             });
+        }
     }
 }
-
-//export default {
-//    data: {
-//        title: ""
-//    },
-//    onInit() {
-//        console.log("index.js/onInit() is evoked");
-//    },
-//    //        JSON.parse(https://api.openweathermap.org/data/2.5/forecast?id=1810821&appid=8289fc0cb3cc706f3078a8c86bea911f);
-//    toWeatherPage(e) {
-//        if (e.direction == 'down') {
-//            router.replace({
-//                uri: 'pages/weather/weather'
-//            });
-//        }
-//    }
-//}
