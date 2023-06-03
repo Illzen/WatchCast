@@ -30,6 +30,7 @@
         "pages": [
           "pages/index/index",
           "pages/launcher/launcher",
+          "pages/weather/weather",
           "pages/test/test"
         ],
         "name": "default"
