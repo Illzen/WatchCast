@@ -1,15 +1,28 @@
 <div class="container">
+    <div class="container">
         <div class="swipeHint" onswipe="toIndexPage">
-                <image class="img" src="/pages/image/mark_arrow_down_30.png" />
         </div>
-        <input type="button" name="button" value="weather" class="btn" onclick="clickAction" />
+        <!-- TODO dynamic hint of swiping down -->
+        <image class="img" src="/pages/image/mark_arrow_down_30.png" />
+    </div>
 
+        <!-- <input type="button" name="button" value="weather" class="btn" onclick="clickAction" /> -->
 
-
-
-
-
-
-
-
+        <!-- TODO click img to go to page -->
+        <!-- TODO fetch logo images -->
+    <div class="container">
+        <image class="img" src="/pages/image/logo.png" />
+    </div>
+    <div class="container">
+        <image class="img" src="/pages/image/logo1.png" />
+    </div>
+    <div class="container">
+        <image class="img" src="/pages/image/logo2.png" />
+    </div>
+    <div class="container">
+        <image class="img" src="/pages/image/logo3.png" />
+    </div>
+    <div class="container">
+        <image class="img" src="/pages/image/logo4.png" />
+    </div>
 </div>
