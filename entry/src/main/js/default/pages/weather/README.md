@@ -4,6 +4,4 @@
 - [ ] show weather degree
 - [ ] quote
 - [x] api.openweathermap.org
-- [ ] 
-- [ ] 
  

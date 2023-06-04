@@ -7,6 +7,9 @@
     <!--    </div>-->
     <!--         <input type="button" name="button" value="weather" class="btn" onclick="clickAction" />-->
     <!-- TODO click img to go to page -->
+    <div class="container" onswipe="toIndexPage">
+        <image class="img" src="/pages/image/computer_cursor_arrow_white.png" />
+    </div>
 
     <list class="todo-wrapper">
         <list-item class="todo-item" for="{{logoList}}">
