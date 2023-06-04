@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 454px;
+    width: 454px;
+}
+.rect{
+    width: 200px;
+    height: 200px;
+    background-color: #f76160;
+    animation-name: Go;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes Go
+{
+    from {
+        background-color: #f76160;
+    }
+    to {
+        background-color: #09ba07;
+    }
+}

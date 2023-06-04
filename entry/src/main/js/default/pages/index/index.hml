@@ -1,5 +1,12 @@
 <div class="container">
-    <text class="title">
-        {{ $t('strings.hello') }} {{ title }}
-    </text>
+    <div class="container" onswipe="toWeatherPage">
+        <image class="img" src="/pages/image/clock.png" />
+    </div>
+
+<!--    <div class="flex-box">-->
+<!--&lt;!&ndash;        <div class="flex-item color-primary"></div>&ndash;&gt;-->
+<!--        <div class="title flex-item">-->
+<!--        </div>-->
+
+<!--    </div>-->
 </div>
