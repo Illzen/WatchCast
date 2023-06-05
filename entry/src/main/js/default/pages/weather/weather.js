@@ -35,6 +35,8 @@ export default {
         this.switchWeatherCode(this.weather.icon);
 
         console.log("Weather icon path:" + this.weather_icon);
+        console.log("Weather quote:" + this.weather_quote);
+        console.log("Weather temperature:" + this.main.temp);
     },
     switchWeatherCode(icon) {
 
