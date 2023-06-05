@@ -1,13 +1,8 @@
 <div class="container">
-    <!--    <div class="container">-->
-    <!--        <div class="swipeHint" onswipe="toIndexPage">-->
-    <!--            <image class="img" src="/pages/image/mark_arrow_down_30.png" />-->
-    <!--        </div>-->
+
     <!--        &lt;!&ndash; TODO dynamic hint of swiping down &ndash;&gt;-->
-    <!--    </div>-->
-    <!--         <input type="button" name="button" value="weather" class="btn" onclick="clickAction" />-->
     <!-- TODO click img to go to page -->
-    <div class="container" onswipe="toIndexPage">
+    <div class="swipeHint" onswipe="toIndexPage">
         <image class="img" src="/pages/image/computer_cursor_arrow_white.png" />
     </div>
 

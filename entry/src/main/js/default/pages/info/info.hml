@@ -3,6 +3,9 @@
     			weather_icon=" "
     			weather_quote="It's a clear night \nYou might want to take a evening stroll to relax..."
     			weather_hex="#fcdcf6"
+
+
+
         {
   "coord": {
     "lon": 119.3061,
