@@ -1,18 +1,23 @@
 <div class="container">
 
     <!--        &lt;!&ndash; TODO dynamic hint of swiping down &ndash;&gt;-->
-    <!-- TODO click img to go to page -->
-    <div class="swipeHint" onswipe="toIndexPage">
-        <image class="img" src="/pages/image/computer_cursor_arrow_white.png" />
-    </div>
 
     <list class="todo-wrapper">
-        <list-item class="todo-item" for="{{logoList}}">
-            <div class="flex-box" onclick="toWeatherPage">
-                <image class="flex-item" src="{{$item.src}}" />
-                <text class="flex-text">{{$item.text}}</text>
-            </div>
+
+        <list-item class="swipe-item">
+                <image class="swipeImg" src="/pages/image/computer_cursor_arrow_white.png" onswipe="toIndexPage"/>
+
         </list-item>
+
+            <list-item class="todo-item" for="{{logoList}}">
+                <div class="flex-box" onclick="toWeatherPage">
+                    <image class="flex-item" src="{{$item.src}}" />
+                    <text class="flex-text">{{$item.text}}</text>
+                </div>
+            </list-item>
+
+
+
 <!--        <list-item>-->
 <!--            <image class="img" src="/pages/image/logo.png" />-->
 <!--        </list-item>-->

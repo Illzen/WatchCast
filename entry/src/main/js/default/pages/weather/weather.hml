@@ -3,14 +3,18 @@
     <div class="outline">
 
         <div class="temperature">
-            {{data.main.temp}}
+            <text class="tempertureText">
+                {{data.main.temp}}
+            </text>
         </div>
         <image class="weatherIcon" src="{{data.weather_icon}}">
 <!--            {{data.weather.icon}}-->
         </image>
 
         <div class="quote">
-            {{data.weather_quote}}
+            <text>
+                {{data.weather_quote}}
+            </text>
         </div>
         <div class="widget">
 

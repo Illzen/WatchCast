@@ -4,6 +4,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    flex-direction: column;
 }
 
 .outline{
@@ -13,22 +14,35 @@
     height: 100%;
     width: 100%;
     flex-direction: column;
-    background-color: purple;
 }
 .temperature{
+    height: 40%;
+    width: 40%;
     background-color: firebrick;
-
-
+}
+.tempertureText{
+    align-items: flex-end;
+    width: 100%;
+    height: 50%;
+    color: azure;
+    font-size: 30px;
+    background-color: purple;
+    
 }
 .weatherIcon{
-    height: 40px;
-    width: 40px;
+    height: 100px;
+    width: 100px;
     background-color: azure;
 
 
 }
 .quote{
+    height: 40%;
+    width: 40%;
     background-color: darkgray;
+
+}
+.quoteText{
 
 }
 .widget{

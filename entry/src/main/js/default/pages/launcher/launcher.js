@@ -2,7 +2,6 @@ import router from '@system.router';
 
 export default {
     data: {
-        title: "",
         logoList:[ {
             src : "/pages/image/logo3.png",
             text : "Calculator"
@@ -18,7 +17,7 @@ export default {
         }]
     },
     onInit() {
-        this.title = "Hello World";
+        console.log("launcher.js/onInit is evoked")
     },
     toIndexPage(e) {
         if (e.direction == 'down') {
