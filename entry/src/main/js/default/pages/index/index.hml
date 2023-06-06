@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="container" onswipe="toWeatherPage">
+    <div class="container" onswipe="toWeatherPage" onlongpress="terminate">
         <image class="img" src="/pages/image/clock.png" />
     </div>
 

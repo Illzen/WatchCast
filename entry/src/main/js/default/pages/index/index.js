@@ -1,4 +1,5 @@
 import router from '@system.router';
+import app from '@system.app';
 
 export default {
     data: {
@@ -19,6 +20,9 @@ export default {
     },
     onDestroy() {
         console.log("index.js/onDestroy() is evoked");
+    },
+    terminate(){
+        app.terminate();
     },
     //        JSON.parse(https://api.openweathermap.org/data/2.5/forecast?id=1810821&appid=8289fc0cb3cc706f3078a8c86bea911f);
     toWeatherPage(e) {
