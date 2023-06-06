@@ -7,14 +7,14 @@
     flex-direction: column;
 }
 
-.outline{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-}
+/*.outline{*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    flex-direction: column;*/
+/*}*/
 .temperature{
     height: 40%;
     width: 40%;
@@ -27,6 +27,16 @@
     color: azure;
     font-size: 30px;
     background-color: purple;
+
+    width: 200px;
+    max-lines: 1;
+    text-overflow: ellipsis;
+    text-valign: middle;
+    line-height: 40px;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-indent: 20px;
+    white-space: pre;
     
 }
 .weatherIcon{
@@ -37,12 +47,26 @@
 
 }
 .quote{
-    height: 40%;
-    width: 40%;
+/*    height: 40%;*/
+/*    width: 40%;*/
+    height: 100%;
+    width: 100%;
     background-color: darkgray;
 
 }
 .quoteText{
+/*    background-color: red;*/
+    color: red;
+    word-spacing: 10px;
+    adapt-height: true;
+
+
+/*    height: 40%;*/
+/*    width: 40%;*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    font-size: 30px;*/
+/*    color: black;*/
 
 }
 .widget{
@@ -52,6 +76,31 @@
 
 
 
+
+
+
+
+.swiper-item {
+    width: 454px;
+    height: 454px;
+    justify-content: center;
+    align-items: center;
+}
+.primary-item {
+    background-color: #007dff;
+}
+.warning-item {
+    background-color: #ff7500;
+}
+.success-item {
+    background-color: #41ba41;
+}
+
+
+.qrCode {
+    width: 200px;
+    height: 200px;
+}
 
 
 

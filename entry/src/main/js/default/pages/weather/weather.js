@@ -26,13 +26,18 @@ export default {
             'sunset': 1685616615
         },
         name: 'Fuzhou',
-        weather_quote: '',
-        weather_icon: '',
+        qr_col: '#87ceeb',
+        qr_bcol: '#f0ffff',
+        qr_value: 'github.com/Illzen/WatchCast',
+//        weather_quote: "Sort of odd, I don't know what to forecast",
+//        weather_quote: "QUOTE!",
+        weather_icon: 'null',
     },
     onInit() {
+        let weather_quote = "QUOTE!";
         console.log("Weather.js/onInit() evoked")
 //        this.weather.icon =
-        this.switchWeatherCode(this.weather.icon);
+//        this.switchWeatherCode(this.weather.icon);
 
         console.log("Weather icon path:" + this.weather_icon);
         console.log("Weather quote:" + this.weather_quote);
@@ -58,7 +63,9 @@ export default {
         //                break;
             case '01n':
                 this.weather_icon = "/pages/image/icons/cloud_weather_forecast_rain_cloudy.png";
-                this.weather_quote = "It's a clear night \nYou might want to take a evening stroll to relax...";
+
+//                this.weather_quote = "It's a clear night \nYou might want to take a evening stroll to relax...";
+                this.weather_quote = "It's a clear night"
 //                this.weather_hex = "#fcdcf6";
                 break;
         //            case '02d':
@@ -144,8 +151,28 @@ export default {
             default:
                 this.weather_icon = "/pages/image/logo1.png"
                 this.weather_quote = "Sort of odd, I don't know what to forecast \nMake sure you have a good time!"
-                this.weather_hex = "#adadff"
                 break;
+        }
+    },
+    changeColor() {
+        if (this.qr_col == '#87ceeb') {
+            this.qr_col = '#fa8072';
+        } else {
+            this.qr_col = '#87ceeb';
+        }
+    },
+    changeBackgroundColor() {
+        if (this.qr_bcol = '#f0ffff') {
+            this.qr_bcol = '#ffffe0';
+        } else {
+            this.qr_bcol = '#f0ffff';
+        }
+    },
+    changeValue() {
+        if (this.qr_value == 'value') {
+            this.qr_value = 'change';
+        } else {
+            this.qr_value = 'value';
         }
     },
     toDetailPage() {
