@@ -28,7 +28,7 @@ export default {
         name: 'Fuzhou',
         qr_col: '#87ceeb',
         qr_bcol: '#f0ffff',
-        qr_value: 'github.com/Illzen/WatchCast',
+        qr_value: 'https://github.com/Illzen/WatchCast',
 //        weather_quote: "Sort of odd, I don't know what to forecast",
 //        weather_quote: "QUOTE!",
         weather_icon: 'null',

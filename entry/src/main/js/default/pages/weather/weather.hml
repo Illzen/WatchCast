@@ -1,8 +1,9 @@
+
 <div class="container" onswipe="toAnotherPage">
 
     <swiper class="container" index="{{index}}" vertical="true">
         <div class="swiper-item primary-item">
-            <text>1</text>
+            <image></image>
         </div>
         <div class="swiper-item warning-item">
             <text>2</text>

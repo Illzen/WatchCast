@@ -31,7 +31,6 @@
           "pages/index/index",
           "pages/launcher/launcher",
           "pages/weather/weather",
-          "pages/test/test",
           "pages/info/info"
         ],
         "name": "default"
