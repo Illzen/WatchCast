@@ -31,5 +31,11 @@ export default {
                 uri: 'pages/launcher/launcher'
             });
         }
+    },
+        toTerminatePage() {
+            router.replace({
+                uri: 'pages/terminate/terminate'
+            });
     }
+
 }

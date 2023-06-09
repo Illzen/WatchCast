@@ -1,13 +1,13 @@
 <div class="container">
-    <div class="container" onswipe="toWeatherPage" onlongpress="terminate">
-            <image class='img' src='/pages/image/clock.png' style="animation-duration:10s;
+    <div class="container" onswipe="toWeatherPage" onlongpress="toTerminatePage">
+        <image class='img' src='/pages/image/clock.png' style="animation-duration:10s;
         animation-iteration-count:infinite;" />
     </div>
 
-<!--    <div class="flex-box">-->
-<!--&lt;!&ndash;        <div class="flex-item color-primary"></div>&ndash;&gt;-->
-<!--        <div class="title flex-item">-->
-<!--        </div>-->
+    <!--    <div class="flex-box">-->
+    <!--&lt;!&ndash;        <div class="flex-item color-primary"></div>&ndash;&gt;-->
+    <!--        <div class="title flex-item">-->
+    <!--        </div>-->
 
-<!--    </div>-->
+    <!--    </div>-->
 </div>
