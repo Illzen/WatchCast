@@ -1,9 +1,9 @@
 <div class="container">
-         <!-- TODO city statistics --> 
-            <!-- 此页面接受由weather页面传入的参数如city或者温度,其他不需或没必要修改参数位于js页面 -->
-         <!-- https://developer.harmonyos.com/cn/docs/documentation/doc-references/lite-wearable-basic-chart-0000001222269637 -->
+    <!-- TODO city statistics -->
+    <!-- 此页面接受由weather页面传入的参数如city或者温度,其他不需或没必要修改参数位于js页面 -->
+    <!-- https://developer.harmonyos.com/cn/docs/documentation/doc-references/lite-wearable-basic-chart-0000001222269637 -->
 
-           <chart class="chart" type="line" ref="linechart" options="{{lineOps}}" datasets="{{lineData}}"></chart>
+    <chart class="chart" type="line" ref="linechart" options="{{lineOps}}" datasets="{{lineData}}"></chart>
 
 
 
@@ -12,4 +12,3 @@
 
 
 </div>
-
