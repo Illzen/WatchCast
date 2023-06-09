@@ -1,13 +1,5 @@
 <div class="container">
-    <div class="container" onswipe="toIndexPage" onlongpress="terminate">
-            <image class='img' src='/pages/image/clock.png' style="animation-duration:10s;
-        animation-iteration-count:infinite;" />
+    <div class="div-button" onswipe="toIndexPage">>
+        <input class="button" type="button" value="Input-Button" onclick="terminate"></input>
     </div>
-
-<!--    <div class="flex-box">-->
-<!--&lt;!&ndash;        <div class="flex-item color-primary"></div>&ndash;&gt;-->
-<!--        <div class="title flex-item">-->
-<!--        </div>-->
-
-<!--    </div>-->
 </div>

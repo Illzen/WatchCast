@@ -9,6 +9,7 @@ export default {
     },
     terminate() {
         app.terminate();
+        console.log("Exiting...")
     },
     toIndexPage() {
         if (e.direction == 'right') {
