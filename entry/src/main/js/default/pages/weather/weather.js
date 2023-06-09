@@ -176,9 +176,21 @@ export default {
             this.qr_value = 'value';
         }
     },
-    toDetailPage() {
+    // TODO dumb method and params not only city
+    toFuzhouPage() {
         router.replace({
-            uri: 'pages/info/info'
+            uri: 'pages/info/info',
+            params: {
+                city: 'Fuzhou',
+            },
+        });
+    },
+    toFuqinPage() {
+        router.replace({
+            uri: 'pages/info/info',
+            params: {
+                city: 'Fuqin',
+            },
         });
     },
     toAnotherPage(e) {

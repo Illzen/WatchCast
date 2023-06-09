@@ -1,8 +1,7 @@
-
 <div class="container" onswipe="toAnotherPage">
 
     <swiper class="container" index="{{index}}" vertical="true">
-        <div class="swiper-item primary-item">
+        <div class="swiper-item primary-item onlongpress=" toFuzhouPage">
             <div style="width: 100%;height: 20%;background-color: chartreuse;">
 
             </div>
@@ -10,7 +9,8 @@
                 <image class="img-mid" src="{{weather_icon}}" />
                 <div class="text-mid">
                     <text class="city">
-                         {{sys.city}}
+                        <!-- {{sys.city}} -->
+                        Fuzhou
                     </text>
                     <text class="weather">
                         {{weather.main}}
@@ -26,43 +26,65 @@
                 </text>
             </div>
         </div>
-        <div class="swiper-item warning-item">
-            <text>2</text>
+        <div class="swiper-item warning-item" onlongpress="toFuqinPage">
+            <div style="width: 100%;height: 20%;background-color: chartreuse;">
+
+            </div>
+            <div class="show-mid">
+                <image class="img-mid" src="{{weather_icon}}" />
+                <div class="text-mid">
+                    <text class="city">
+                        <!-- {{sys.city}} -->
+                        Fuqin
+                    </text>
+                    <text class="weather">
+                        {{weather.main}}
+                    </text>
+                </div>
+            </div>
+            <div class="show-bottom">
+                <text class="temp-avg">
+                    {{main.temp}}°C
+                </text>
+                <text class="temp-feel">
+                    {{main.feels_like}}°C
+                </text>
+            </div>
         </div>
         <div class="swiper-item success-item">
             <qrcode value="{{qr_value}}" class="qrCode" style="color: {{qr_color}};background-color: {{qr_color}};"></qrcode>
-<!--            <input type="button" onclick="changeColor" class="button">Color</input>-->
-<!--            <input type="button" onclick="changeBackgroundColor" class="button">BackgroundColor</input>-->
-<!--            <input type="button" onclick="changeColor" class="button">Value</input>-->
+            <!--            <input type="button" onclick="changeColor" class="button">Color</input>-->
+            <!--            <input type="button" onclick="changeBackgroundColor" class="button">BackgroundColor</input>-->
+            <!--            <input type="button" onclick="changeColor" class="button">Value</input>-->
         </div>
     </swiper>
 
-<!--    <div class="outline">-->
+    <!--    <div class="outline">-->
 
-<!--        <div class="temperature">-->
-<!--            <text class="tempertureText">-->
-<!--                {{data.main.temp}}-->
-<!--            </text>-->
-<!--        </div>-->
-<!--        <image class="weatherIcon" src="{{data.weather_icon}}">-->
-<!--            {{data.weather.icon}}-->
-<!--        </image>-->
+    <!--        <div class="temperature">-->
+    <!--            <text class="tempertureText">-->
+    <!--                {{data.main.temp}}-->
+    <!--            </text>-->
+    <!--        </div>-->
+    <!--        <image class="weatherIcon" src="{{data.weather_icon}}">-->
+    <!--            {{data.weather.icon}}-->
+    <!--        </image>-->
 
-<!--        <div class="quote">-->
-<!--            <text class="quoteText">-->
-<!--                {{data.weather_quote}}-->
+    <!--        <div class="quote">-->
+    <!--            <text class="quoteText">-->
+    <!--                {{data.weather_quote}}-->
 
-<!--                {{weather_quote}}-->
-<!--                {{$item.weather_quote}}-->
-<!--                {{sys.country}}-->
-<!--                a random piece of message-->
-<!--            </text>-->
-<!--        </div>-->
-<!--        <div class="widget">-->
+    <!--                {{weather_quote}}-->
+    <!--                {{$item.weather_quote}}-->
+    <!--                {{sys.country}}-->
+    <!--                a random piece of message-->
+    <!--            </text>-->
+    <!--        </div>-->
+    <!--        <div class="widget">-->
 
-<!--        </div>-->
+    <!--        </div>-->
 
-<!--    </div>-->
+    <!--    </div>-->
 
 
 </div>
