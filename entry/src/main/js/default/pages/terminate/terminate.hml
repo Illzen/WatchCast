@@ -1,5 +1,5 @@
 <div class="container">
     <div class="div-button" onswipe="toIndexPage">>
-        <input class="button" type="button" value="Input-Button" onclick="terminate"></input>
+        <input class="button" type="button" value="Shutdown" onclick="terminate"></input>
     </div>
 </div>
