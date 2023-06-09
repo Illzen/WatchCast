@@ -54,7 +54,6 @@ export default {
         },
         timezone: 28800,
         id: 1810821,
-        cod: 200,
         city: 'Default',
         weather_quote: "It's a clear night \nYou might want to take a evening stroll to relax..."
     },
