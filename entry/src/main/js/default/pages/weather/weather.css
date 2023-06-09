@@ -14,30 +14,6 @@
 /*    width: 100%;*/
 /*    flex-direction: column;*/
 /*}*/
-.temperature{
-    height: 40%;
-    width: 40%;
-    background-color: firebrick;
-}
-.tempertureText{
-    align-items: flex-end;
-    width: 100%;
-    height: 50%;
-    color: azure;
-    font-size: 30px;
-    background-color: purple;
-
-    width: 200px;
-    max-lines: 1;
-    text-overflow: ellipsis;
-    text-valign: middle;
-    line-height: 40px;
-    text-decoration: underline;
-    text-decoration-color: red;
-    text-indent: 20px;
-    white-space: pre;
-    
-}
 .quote{
 /*    height: 40%;*/
 /*    width: 40%;*/
@@ -51,18 +27,12 @@
     color: red;
     word-spacing: 10px;
     adapt-height: true;
-
-
 /*    height: 40%;*/
 /*    width: 40%;*/
 /*    height: 100%;*/
 /*    width: 100%;*/
 /*    font-size: 30px;*/
 /*    color: black;*/
-
-}
-.widget{
-
 }
 
 .swiper-item {
@@ -73,11 +43,56 @@
 }
 .primary-item {
     background-color: #007dff;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 /*天气图标*/
-.show {
-    width: 256px;
-    height: 256px;
+.show-mid {
+    width: 100%;
+    height: 50%;
+}
+.img-mid {
+    margin-left: 15%;
+    width: 50%;
+    height: 100%;
+}
+.text-mid {
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+}
+.city {
+    margin-top: 25%;
+    height: 25%;
+    width: 100%;
+    font-size: 38px;
+    text-align: center;
+}
+.weather {
+    margin-top:15%;
+    height: 25%;
+    width: 100%;
+    font-size: 38px;
+    text-align: center;
+}
+.show-bottom {
+    width: 60%;
+    height: 20%;
+    background-color: aqua;
+}
+.temp-avg {
+    width: 60%;
+    height: 100%;
+    font-size: 38px;
+    color: azure;
+    background-color: black;
+}
+.temp-feel {
+    width: 40%;
+    height: 100%;
+    font-size: 32px;
+    color: azure;
+    background-color: red;
 }
 .warning-item {
     background-color: #ff7500;
@@ -91,22 +106,6 @@
     width: 200px;
     height: 200px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .rect{
     width: 200px;

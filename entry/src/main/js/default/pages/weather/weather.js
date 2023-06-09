@@ -23,7 +23,8 @@ export default {
             'id': 9658,
             'country': 'CN',
             'sunrise': 1685567465,
-            'sunset': 1685616615
+            'sunset': 1685616615,
+            'city': 'Fuzhou'
         },
         name: 'Fuzhou',
         qr_col: '#87ceeb',
@@ -38,7 +39,7 @@ export default {
         console.log("Weather.js/onInit() evoked")
 //        this.weather.icon =
 //        this.switchWeatherCode(this.weather.icon);
-
+        this.switchWeatherCode(this.weather.icon);
         console.log("Weather icon path:" + this.weather_icon);
         console.log("Weather quote:" + this.weather_quote);
         console.log("Weather temperature:" + this.main.temp);

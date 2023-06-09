@@ -3,10 +3,8 @@
     <!--        &lt;!&ndash; TODO dynamic hint of swiping down &ndash;&gt;-->
 
     <list class="todo-wrapper">
-
         <list-item class="swipe-item">
                 <image class="swipeImg" src="/pages/image/computer_cursor_arrow_white.png" onswipe="toIndexPage"/>
-
         </list-item>
 
             <list-item class="todo-item" for="{{logoList}}">
@@ -15,8 +13,7 @@
                     <text class="flex-text">{{$item.text}}</text>
                 </div>
             </list-item>
-
-
+    </list>
 
 <!--        <list-item>-->
 <!--            <image class="img" src="/pages/image/logo.png" />-->
@@ -24,7 +21,6 @@
 <!--        <list-item>-->
 <!--            <image class="img" src="/pages/image/logo1.png" />-->
 <!--        </list-item>-->
-    </list>
 <!--    <div class="appItem" onclick="toWeatherPage">-->
 <!--    </div>-->
 <!--    <div class="appItem">-->
