@@ -1,7 +1,7 @@
 <div class="container">
     <div class="container" onswipe="toWeatherPage" onlongpress="terminate">
-            <image class='img' src='/pages/image/clock.png' style="animation-duration:{{duration}};
-        animation-iteration-count:{{count}};" />
+            <image class='img' src='/pages/image/clock.png' style="animation-duration:10s;
+        animation-iteration-count:infinite;" />
     </div>
 
 <!--    <div class="flex-box">-->
