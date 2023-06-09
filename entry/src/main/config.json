@@ -31,7 +31,7 @@
           "pages/index/index",
           "pages/launcher/launcher",
           "pages/weather/weather",
-          "pages/terminal/terminal",
+          "pages/terminate/terminate",
           "pages/info/info"
         ],
         "name": "default"
