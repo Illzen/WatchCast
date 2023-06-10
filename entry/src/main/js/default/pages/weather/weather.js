@@ -5,8 +5,7 @@ export default {
         // TODO https://developer.harmonyos.com/cn/docs/documentation/doc-references/lite-wearable-container-swiper-0000001176909938
         // Swipe variable changes while swiping
         index: 0,
-        weather: [
-            {
+        weather: [{
                 "icon": "",
                 "coord": {
                     "lon": 119.3061,
@@ -57,8 +56,7 @@ export default {
                     "lon": 119.3794,
                     "lat": 25.725
                 },
-                "weather":
-                {
+                "weather": {
                     "id": 803,
                     "main": "Clouds",
                     "description": "broken clouds",
@@ -132,7 +130,7 @@ export default {
     },
     //另一种实现,长按方法
     toInfoPage(city) {
-        console.log("city:"+city);
+        console.log("city:" + city);
         router.replace({
             uri: 'pages/info/info',
             params: {
@@ -142,8 +140,7 @@ export default {
     },
 
     // TODO dumb method and params not only city
-    toCityPage
-    () {
+    toCityPage() {
         switch (this.city) {
             case 'Fuzhou':
                 router.replace({
@@ -179,17 +176,10 @@ export default {
                     uri: 'pages/launcher/launcher'
                 });
                 break;
-        // case 'bottom':
-        //     router.replace({
-        //         uri: 'pages/report2/report2'
-        //     });
         }
-    }
-,
-    getWeather
-    (
-        weather
-    ) {
+    },
+    getWeather(weather) {
+
         switch (weather) {
             case 'Clouds':
                 return 'pages/image/icons/cloud_weather_forecast_rain_cloudy.png'
