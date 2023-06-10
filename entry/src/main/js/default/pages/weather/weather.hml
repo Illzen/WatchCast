@@ -1,6 +1,6 @@
 <div class="container" onswipe="toAnotherPage">
 
-    <swiper class="container" index="{{index}}" vertical="true">
+    <swiper class="container" index="{{index}}" vertical="true" loop="false" onchange="changeIndex">
         <div class="swiper-item primary-item" onlongpress="toCityPage">
             <div style="width: 100%;height: 20%;background-color: chartreuse;">
 

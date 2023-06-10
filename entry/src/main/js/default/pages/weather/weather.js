@@ -4,20 +4,12 @@ export default {
     data: {
         // TODO https://developer.harmonyos.com/cn/docs/documentation/doc-references/lite-wearable-container-swiper-0000001176909938
         // Swipe variable changes while swiping
-        index: 1,
-        change: {
+        index: 0,
+        change: [{
             'city': 'Fuzhou'
-        },
-        index: 2,
-        change: {
+        },{
             'city': 'Fuqin'
-        },
-
-
-
-
-
-
+        }],
         weather: {
             'id': 800,
             'main': 'Clear',
@@ -170,6 +162,10 @@ export default {
                 this.weather_quote = "Sort of odd, I don't know what to forecast \nMake sure you have a good time!"
                 break;
         }
+    },
+    changeIndex() {
+        this.index++;
+        console.log("index="+this.index);
     },
     changeColor() {
         if (this.qr_col == '#87ceeb') {
