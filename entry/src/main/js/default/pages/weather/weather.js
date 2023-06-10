@@ -5,169 +5,111 @@ export default {
         // TODO https://developer.harmonyos.com/cn/docs/documentation/doc-references/lite-wearable-container-swiper-0000001176909938
         // Swipe variable changes while swiping
         index: 0,
-        change: [{
-            'city': 'Fuzhou'
-        },{
-            'city': 'Fuqin'
-        }],
-        weather: {
-            'id': 800,
-            'main': 'Clear',
-            'description': 'clear sky',
-        },
-        main: {
-            'temp': 25.94,
-            'feels_like': 26.97,
-            'temp_min': 25.94,
-            'temp_max': 25.94,
-            'pressure': 1004,
-            'humidity': 91,
-            'sea_level': 1004,
-            'grnd_level': 1003
-        },
-        sys: {
-            'type': 1,
-            'id': 9658,
-            'country': 'CN',
-            'sunrise': 1685567465,
-            'sunset': 1685616615,
-        },
-        // name: 'Fuzhou',
+        weather: [
+            {
+                "icon": "",
+                "coord": {
+                    "lon": 119.3061,
+                    "lat": 26.0614
+                },
+                "weather": {
+                    "id": 804,
+                    "main": "Clouds",
+                    "description": "overcast clouds",
+                    "icon": "04d"
+                },
+                "base": "stations",
+                "main": {
+                    "temp": 298.09,
+                    "feels_like": 298.55,
+                    "temp_min": 298.09,
+                    "temp_max": 298.09,
+                    "pressure": 1001,
+                    "humidity": 73,
+                    "sea_level": 1001,
+                    "grnd_level": 999
+                },
+                "visibility": 10000,
+                "wind": {
+                    "speed": 1.73,
+                    "deg": 170,
+                    "gust": 1.86
+                },
+                "clouds": {
+                    "all": 97
+                },
+                "dt": 1686385357,
+                "sys": {
+                    "type": 1,
+                    "id": 9658,
+                    "country": "CN",
+                    "sunrise": 1686345015,
+                    "sunset": 1686394448
+                },
+                "timezone": 28800,
+                "id": 1810821,
+                "name": "Fuzhou",
+                "cod": 200
+            },
+            {
+                "icon": "",
+                "coord": {
+                    "lon": 119.3794,
+                    "lat": 25.725
+                },
+                "weather":
+                {
+                    "id": 803,
+                    "main": "Clouds",
+                    "description": "broken clouds",
+                    "icon": "04n"
+                },
+                "base": "stations",
+                "main": {
+                    "temp": 297.48,
+                    "feels_like": 298.5,
+                    "temp_min": 297.48,
+                    "temp_max": 297.48,
+                    "pressure": 1003,
+                    "humidity": 97,
+                    "sea_level": 1003,
+                    "grnd_level": 1000
+                },
+                "visibility": 10000,
+                "wind": {
+                    "speed": 2.27,
+                    "deg": 218,
+                    "gust": 3.54
+                },
+                "clouds": {
+                    "all": 82
+                },
+                "dt": 1686399158,
+                "sys": {
+                    "country": "CN",
+                    "sunrise": 1686345041,
+                    "sunset": 1686394387
+                },
+                "timezone": 28800,
+                "id": 1797120,
+                "name": "Fuqing",
+                "cod": 200
+            },
+        ],
+        cards: [],
         qr_col: '#87ceeb',
         qr_bcol: '#f0ffff',
         qr_value: 'https://github.com/Illzen/WatchCast',
-        //        weather_quote: "Sort of odd, I don't know what to forecast",
-        //        weather_quote: "QUOTE!",
-        weather_icon: 'null',
     },
     onInit() {
-        console.log("Weather.js/onInit() evoked")
-        //        this.weather.icon =
-        //        this.switchWeatherCode(this.weather.icon);
-        this.switchWeatherCode(this.city);
-        console.log("Weather icon path:" + this.weather_icon);
-        console.log("Weather quote:" + this.weather_quote);
-        console.log("Weather temperature:" + this.main.temp);
+        console.log("Weather.js/onInit() evoked");
+        this.weather.forEach(element => {
+            element.icon = this.getWeather(element.weather.main);
+            console.log(element.icon);
+        });
     },
-    switchWeatherCode(city) {
 
-        switch (city) {
-            case 'Fuzhou':
-                this.weather_icon = "/pages/image/icons/cloud_weather_forecast_rain_cloudy.png";
-                // this.weather.main
-                // this.main.temp
-                // this.main.feels_like
-
-
-                //                this.weather_quote = "It's a clear night \nYou might want to take a evening stroll to relax...";
-                this.weather_quote = "It's a clear night"
-                //                this.weather_hex = "#fcdcf6";
-                break;
-            case 'Fuqin':
-                this.weather_icon = "/pages/image/icons/cloud_weather_forecast_rain_cloudy.png";
-                this.weather_quote = "It's  cloudy, sort of gloomy \nYou'd better get a book to read..."
-                // this.weather_hex = "#adadff"
-                break;
-                //            case '50d':
-                //                weather_icon = " ";
-                //                weather_quote = "Forecast says it's misty \nMake sure you don't get lost on your way...";
-                //                weather_hex = "#84afdb";
-                //                break;
-                //            case '50n':
-                //                weather_icon = " "
-                //                weather_quote = "Forecast says it's a misty night \nDon't go anywhere tonight or you might get lost..."
-                //                weather_hex = "#84afdb"
-                //                break;
-                //            case '01d':
-                //                weather_icon = " "
-                //                weather_quote = "It's a sunny day, gonna be fun! \nDon't go wandering all by yourself though..." weather_hex = "#ffd86b"
-                //                break;
-                //            case '02n':
-                //                weather_icon = " "
-                //                weather_quote = "It's a cloudy night \nHow about some hot chocolate and a warm bed?"
-                //                weather_hex = "#adadff"
-                //                break;
-                //            case '03d':
-                //                weather_icon = " "
-                //                weather_quote = "It's  cloudy, sort of gloomy \nYou'd better get a book to read..."
-                //                weather_hex = "#adadff"
-                //                break;
-                //            case '03n':
-                //                weather_icon = " "
-                //                weather_quote = "It's a cloudy night \nHow about some hot chocolate and a warm bed?"
-                //                weather_hex = "#adadff"
-                //                break;
-                //            case '04d':
-                //                weather_icon = " "
-                //                weather_quote = "It's  cloudy, sort of gloomy \nYou'd better get a book to read..."
-                //                weather_hex = "#adadff"
-                //                break;
-                //            case '04n':
-                //                weather_icon = " "
-                //                weather_quote = "It's a cloudy night \nHow about some hot chocolate and a warm bed?"
-                //                weather_hex = "#adadff"
-                //                break;
-                //            case '09d':
-                //                weather_icon = " "
-                //                weather_quote = "It's rainy, it's a great day! \nGet some ramen and watch as the rain falls..."
-                //                weather_hex = "#6b95ff"
-                //                break;
-                //            case '09n':
-                //                weather_icon = " "
-                //                weather_quote = " It's gonna rain tonight it seems \nMake sure your clothes aren't still outside..."
-                //                weather_hex = "#6b95ff"
-                //                break;
-                //            case '10d':
-                //                weather_icon = " "
-                //                weather_quote = "It's rainy, it's a great day! \nGet some ramen and watch as the rain falls..."
-                //                weather_hex = "#6b95ff"
-                //                break;
-                //            case '10n':
-                //                weather_icon = " "
-                //                weather_quote = " It's gonna rain tonight it seems \nMake sure your clothes aren't still outside..."
-                //                weather_hex = "#6b95ff"
-                //                break;
-                //            case '11d':
-                //                weather_icon = ""
-                //                weather_quote = "There's storm for forecast today \nMake sure you don't get blown away..."
-                //                weather_hex = "#ffeb57"
-                //                break;
-                //            case '11n':
-                //                weather_icon = ""
-                //                weather_quote = "There's gonna be storms tonight \nMake sure you're warm in bed and the windows are shut..."
-                //                weather_hex = "#ffeb57"
-                //                break;
-                //            case '13d':
-                //                weather_icon = " "
-                //                weather_quote = "It's gonna snow today \nYou'd better wear thick clothes and make a snowman as well!"
-                //                weather_hex = "#e3e6fc"
-                //                break;
-                //            case '13n':
-                //                weather_icon = " "
-                //                weather_quote = "It's gonna snow tonight \nMake sure you get up early tomorrow to see the sights..."
-                //                weather_hex = "#e3e6fc"
-                //                break;
-                //            case '40d':
-                //                weather_icon = " "
-                //                weather_quote = "Forecast says it's misty \nMake sure you don't get lost on your way..."
-                //                weather_hex = "#84afdb"
-                //                break;
-                //            case '40n':
-                //                weather_icon = " "
-                //                weather_quote = "Forecast says it's a misty night \nDon't go anywhere tonight or you might get lost..."
-                //                weather_hex = "#84afdb"
-                //                break;
-            default:
-                this.weather_icon = "/pages/image/logo1.png"
-                this.weather_quote = "Sort of odd, I don't know what to forecast \nMake sure you have a good time!"
-                break;
-        }
-    },
-    changeIndex() {
-        this.index++;
-        console.log("index="+this.index);
-    },
-    changeColor() {
+    changeQrColor() {
         if (this.qr_col == '#87ceeb') {
             this.qr_col = '#fa8072';
         } else {
@@ -181,15 +123,27 @@ export default {
             this.qr_bcol = '#f0ffff';
         }
     },
-    changeValue() {
+    changeQrValue() {
         if (this.qr_value == 'value') {
             this.qr_value = 'change';
         } else {
             this.qr_value = 'value';
         }
     },
+    //另一种实现,长按方法
+    toInfoPage(city) {
+        console.log("city:"+city);
+        router.replace({
+            uri: 'pages/info/info',
+            params: {
+                city: city,
+            },
+        });
+    },
+
     // TODO dumb method and params not only city
-    toCityPage() {
+    toCityPage
+    () {
         switch (this.city) {
             case 'Fuzhou':
                 router.replace({
@@ -217,47 +171,41 @@ export default {
                     },
                 });
         }
-    },
-    //toFuzhouPage() {
-    //    router.replace({
-    //        uri: 'pages/info/info',
-    //        params: {
-    //            city: 'Fuzhou',
-    //            weather_icon: "/pages/image/icons/cloud_weather_forecast_rain_cloudy.png",
-    //            //TODO if variable works
-    //            weather: this.weather.main,
-    //            //: this.main.temp
-    //            //: this.feels_like
-    //        },
-    //    });
-    //},
-    //toFuqinPage() {
-    //    router.replace({
-    //        uri: 'pages/info/info',
-    //        params: {
-    //            city: 'Fuqin',
-    //            weather_icon: "/pages/image/icons/cloud_weather_forecast_rain_cloudy.png",
-    //            //TODO if variable works
-    //            weather: this.weather.main,
-    //            //: this.main.temp
-    //            //: this.feels_like
-    //        },
-    //    });
-    //},
-    toAnotherPage(e) {
+    }
+,
+    toAnotherPage
+    (
+        e
+    ) {
         switch (e.direction) {
             case 'right':
                 router.replace({
                     uri: 'pages/launcher/launcher'
                 });
                 break;
-                // case 'bottom':
-                //     router.replace({
-                //         uri: 'pages/report2/report2'
-                //     });
+        // case 'bottom':
+        //     router.replace({
+        //         uri: 'pages/report2/report2'
+        //     });
         }
-    },
-    getWeather() {
-
+    }
+,
+    getWeather
+    (
+        weather
+    ) {
+        switch (weather) {
+            case 'Clouds':
+                return 'pages/image/icons/cloud_weather_forecast_rain_cloudy.png'
+                break;
+            case 'Rain':
+                return 'pages/image/icons/forecast_rain_cloud_weather_raining.png'
+                break;
+            case 'Clear':
+                return 'pages/image/icons/sunny_sun_weather_climate_forecast.png'
+                break;
+            default:
+                break;
+        }
     }
 }
