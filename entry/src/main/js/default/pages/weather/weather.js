@@ -8,12 +8,20 @@ export default {
         change: {
             'city': 'Fuzhou'
         },
+        index: 2,
+        change: {
+            'city': 'Fuqin'
+        },
+
+
+
+
+
 
         weather: {
             'id': 800,
             'main': 'Clear',
             'description': 'clear sky',
-            'icon': '01n'
         },
         main: {
             'temp': 25.94,
@@ -31,9 +39,8 @@ export default {
             'country': 'CN',
             'sunrise': 1685567465,
             'sunset': 1685616615,
-            'city': 'Fuzhou'
         },
-        name: 'Fuzhou',
+        // name: 'Fuzhou',
         qr_col: '#87ceeb',
         qr_bcol: '#f0ffff',
         qr_value: 'https://github.com/Illzen/WatchCast',
@@ -45,14 +52,14 @@ export default {
         console.log("Weather.js/onInit() evoked")
         //        this.weather.icon =
         //        this.switchWeatherCode(this.weather.icon);
-        this.switchWeatherCode(this.weather.icon);
+        this.switchWeatherCode(this.city);
         console.log("Weather icon path:" + this.weather_icon);
         console.log("Weather quote:" + this.weather_quote);
         console.log("Weather temperature:" + this.main.temp);
     },
-    switchWeatherCode(icon) {
+    switchWeatherCode(city) {
 
-        switch (icon) {
+        switch (city) {
             //            case '50d':
             //                weather_icon = " ";
             //                weather_quote = "Forecast says it's misty \nMake sure you don't get lost on your way...";
@@ -68,14 +75,14 @@ export default {
             //                weather_quote = "It's a sunny day, gonna be fun! \nDon't go wandering all by yourself though..."
             //                weather_hex = "#ffd86b"
             //                break;
-            case '01n':
+            case 'Fuzhou':
                 this.weather_icon = "/pages/image/icons/cloud_weather_forecast_rain_cloudy.png";
 
                 //                this.weather_quote = "It's a clear night \nYou might want to take a evening stroll to relax...";
                 this.weather_quote = "It's a clear night"
                 //                this.weather_hex = "#fcdcf6";
                 break;
-            case '02d':
+            case 'Fuqin':
                 this.weather_icon = "/pages/image/icons/cloud_weather_forecast_rain_cloudy.png";
                 this.weather_quote = "It's  cloudy, sort of gloomy \nYou'd better get a book to read..."
                 // this.weather_hex = "#adadff"
