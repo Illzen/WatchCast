@@ -171,12 +171,8 @@ export default {
                     },
                 });
         }
-    }
-,
-    toAnotherPage
-    (
-        e
-    ) {
+    },
+    toAnotherPage(e) {
         switch (e.direction) {
             case 'right':
                 router.replace({
