@@ -1,7 +1,7 @@
 <div class="container" onswipe="toAnotherPage">
 
     <swiper class="container" index="{{index}}" vertical="true">
-        <div class="swiper-item primary-item" onlongpress="toFuzhouPage">
+        <div class="swiper-item primary-item" onlongpress="toCityPage">
             <div style="width: 100%;height: 20%;background-color: chartreuse;">
 
             </div>
@@ -26,7 +26,7 @@
                 </text>
             </div>
         </div>
-        <div class="swiper-item warning-item" onlongpress="toFuqinPage">
+        <div class="swiper-item warning-item" onlongpress="toCityPage">
             <div style="width: 100%;height: 20%;background-color: chartreuse;">
 
             </div>

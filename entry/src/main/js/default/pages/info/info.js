@@ -56,34 +56,35 @@ export default {
             city: 'Default',
             weather_quote: "It's a clear night \nYou might want to take a evening stroll to relax..."
         },
+    },
 
 
-        onInit() {
-            console.log("info.js/onInit is envoked");
-            // TODO params such as city; city position; city air quality; wind speed......
-            console.log("Current city: " + this.city);
+    onInit() {
+        console.log("info.js/onInit is envoked");
+        // TODO params such as city; city position; city air quality; wind speed......
+        console.log("Current city: " + this.city);
 
-        },
+    },
 
-        addData() {
-            this.$refs.linechart.append({
-                serial: 0,
-                data: [Math.floor(Math.random() * 400) + 400]
-            })
-        },
+    addData() {
+        this.$refs.linechart.append({
+            serial: 0,
+            data: [Math.floor(Math.random() * 400) + 400]
+        })
+    },
 
 
-        toAnotherPage(e) {
-            switch (e.direction) {
-                case 'right':
-                    router.replace({
-                        uri: 'pages/weather/weather'
-                    });
-                    break;
-                    // case 'bottom':
-                    //     router.replace({
-                    //         uri: 'pages/report2/report2'
-                    //     });
-            }
-        },
-    }
+    toAnotherPage(e) {
+        switch (e.direction) {
+            case 'right':
+                router.replace({
+                    uri: 'pages/weather/weather'
+                });
+                break;
+                // case 'bottom':
+                //     router.replace({
+                //         uri: 'pages/report2/report2'
+                //     });
+        }
+    },
+}

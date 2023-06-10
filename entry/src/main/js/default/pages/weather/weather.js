@@ -60,23 +60,12 @@ export default {
     switchWeatherCode(city) {
 
         switch (city) {
-            //            case '50d':
-            //                weather_icon = " ";
-            //                weather_quote = "Forecast says it's misty \nMake sure you don't get lost on your way...";
-            //                weather_hex = "#84afdb";
-            //                break;
-            //            case '50n':
-            //                weather_icon = " "
-            //                weather_quote = "Forecast says it's a misty night \nDon't go anywhere tonight or you might get lost..."
-            //                weather_hex = "#84afdb"
-            //                break;
-            //            case '01d':
-            //                weather_icon = " "
-            //                weather_quote = "It's a sunny day, gonna be fun! \nDon't go wandering all by yourself though..."
-            //                weather_hex = "#ffd86b"
-            //                break;
             case 'Fuzhou':
                 this.weather_icon = "/pages/image/icons/cloud_weather_forecast_rain_cloudy.png";
+                // this.weather.main
+                // this.main.temp
+                // this.main.feels_like
+
 
                 //                this.weather_quote = "It's a clear night \nYou might want to take a evening stroll to relax...";
                 this.weather_quote = "It's a clear night"
@@ -87,6 +76,20 @@ export default {
                 this.weather_quote = "It's  cloudy, sort of gloomy \nYou'd better get a book to read..."
                 // this.weather_hex = "#adadff"
                 break;
+                //            case '50d':
+                //                weather_icon = " ";
+                //                weather_quote = "Forecast says it's misty \nMake sure you don't get lost on your way...";
+                //                weather_hex = "#84afdb";
+                //                break;
+                //            case '50n':
+                //                weather_icon = " "
+                //                weather_quote = "Forecast says it's a misty night \nDon't go anywhere tonight or you might get lost..."
+                //                weather_hex = "#84afdb"
+                //                break;
+                //            case '01d':
+                //                weather_icon = " "
+                //                weather_quote = "It's a sunny day, gonna be fun! \nDon't go wandering all by yourself though..." weather_hex = "#ffd86b"
+                //                break;
                 //            case '02n':
                 //                weather_icon = " "
                 //                weather_quote = "It's a cloudy night \nHow about some hot chocolate and a warm bed?"
@@ -190,22 +193,61 @@ export default {
         }
     },
     // TODO dumb method and params not only city
-    toFuzhouPage() {
-        router.replace({
-            uri: 'pages/info/info',
-            params: {
-                city: 'Fuzhou',
-            },
-        });
+    toCityPage() {
+        switch (this.city) {
+            case 'Fuzhou':
+                router.replace({
+                    uri: 'pages/info/info',
+                    params: {
+                        city: 'Fuzhou',
+                        weather_icon: "/pages/image/icons/cloud_weather_forecast_rain_cloudy.png",
+                        //TODO if variable works
+                        weather: this.weather.main,
+                        //: this.main.temp
+                        //: this.feels_like
+                    },
+                });
+                break;
+            case 'Fuqin':
+                router.replace({
+                    uri: 'pages/info/info',
+                    params: {
+                        city: 'Fuqin',
+                        weather_icon: "/pages/image/icons/cloud_weather_forecast_rain_cloudy.png",
+                        //TODO if variable works
+                        weather: this.weather.main,
+                        //: this.main.temp
+                        //: this.feels_like
+                    },
+                });
+        }
     },
-    toFuqinPage() {
-        router.replace({
-            uri: 'pages/info/info',
-            params: {
-                city: 'Fuqin',
-            },
-        });
-    },
+    //toFuzhouPage() {
+    //    router.replace({
+    //        uri: 'pages/info/info',
+    //        params: {
+    //            city: 'Fuzhou',
+    //            weather_icon: "/pages/image/icons/cloud_weather_forecast_rain_cloudy.png",
+    //            //TODO if variable works
+    //            weather: this.weather.main,
+    //            //: this.main.temp
+    //            //: this.feels_like
+    //        },
+    //    });
+    //},
+    //toFuqinPage() {
+    //    router.replace({
+    //        uri: 'pages/info/info',
+    //        params: {
+    //            city: 'Fuqin',
+    //            weather_icon: "/pages/image/icons/cloud_weather_forecast_rain_cloudy.png",
+    //            //TODO if variable works
+    //            weather: this.weather.main,
+    //            //: this.main.temp
+    //            //: this.feels_like
+    //        },
+    //    });
+    //},
     toAnotherPage(e) {
         switch (e.direction) {
             case 'right':
