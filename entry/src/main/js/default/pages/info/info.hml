@@ -4,11 +4,4 @@
     <!-- https://developer.harmonyos.com/cn/docs/documentation/doc-references/lite-wearable-basic-chart-0000001222269637 -->
 
     <chart class="chart" type="line" ref="linechart" options="{{lineOps}}" datasets="{{lineData}}"></chart>
-
-
-
-
-
-
-
 </div>

@@ -14,15 +14,13 @@
 .todo-wrapper {
     width: 48%;
     height: 100%;
-    background-color: blue;
-    justify-content: center;
+/*    justify-content: center;*/
 }
 
 .todo-item {
     width: 100%;
     height: 40%;/*    padding-top: 30px;*/
 /*    padding-bottom: 30px;*/
-    background-color: azure;
 /*    border-radius: 50px;*/
     justify-content: center;
 }
@@ -35,7 +33,7 @@
 
 
 .title {
-    background-color: firebrick;
+/*    background-color: firebrick;*/
 
 /*    padding: 0px;*/
 /*    margin: 10px;*/

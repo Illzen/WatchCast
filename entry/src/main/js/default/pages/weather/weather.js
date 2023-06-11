@@ -5,7 +5,8 @@ export default {
         // TODO https://developer.harmonyos.com/cn/docs/documentation/doc-references/lite-wearable-container-swiper-0000001176909938
         // Swipe variable changes while swiping
         index: 0,
-        weather: [{
+        weather: [
+            {
                 "icon": "",
                 "coord": {
                     "lon": 119.3061,

@@ -1,10 +1,11 @@
 <div class="container" onswipe="toAnotherPage">
-
-	<swiper class="container" vertical="false" loop="true">
-		<list-item class="card" for="{{ weather }}" onlongpress="toInfoPage({{$item.name}})">
+	<swiper class="container" vertical="true" loop="true">
+		<list-item class="card" style="background-color: azure;" for="{{ weather }}" onlongpress="toInfoPage({{$item.name}})">
 			<div class="container" style="flex-direction: column;">
 				<div class="show-up">
+					<text>
 
+					</text>
 				</div>
 				<div class="show-mid">
 					<image class="img-mid" src="{{$item.icon}}"/>
@@ -19,24 +20,25 @@
 				</div>
 				<div class="show-bottom">
 					<text class="temp-avg">
-						{{ $item.main.temp }}°C
+						{{ $item.main.temp }}°
 					</text>
 					<text class="temp-feel">
-						{{ $item.main.feels_like }}°C
+						{{ $item.main.feels_like }}°
 					</text>
 				</div>
 			</div>
 		</list-item>
+		<div class="swiper-item success-item">
+			<qrcode value="{{qr_value}}" class="qrCode" style="color: {{qr_color}};background-color: {{qr_color}};"></qrcode>
+<!--			<input type="button" onclick="changeColor" class="button">Color</input>-->
+<!--			<input type="button" onclick="changeBackgroundColor" class="button">BackgroundColor</input>-->
+<!--			<input type="button" onclick="changeColor" class="button">Value</input>-->
+		</div>
 	</swiper>
 
 
 <!--
-<!--        <div class="swiper-item success-item">-->
-<!--            <qrcode value="{{qr_value}}" class="qrCode" style="color: {{qr_color}};background-color: {{qr_color}};"></qrcode>-->
-<!--            &lt;!&ndash;            <input type="button" onclick="changeColor" class="button">Color</input>&ndash;&gt;-->
-<!--            &lt;!&ndash;            <input type="button" onclick="changeBackgroundColor" class="button">BackgroundColor</input>&ndash;&gt;-->
-<!--            &lt;!&ndash;            <input type="button" onclick="changeColor" class="button">Value</input>&ndash;&gt;-->
-<!--        </div>-->
+
 
 <!--    <div class="outline">-->
 
